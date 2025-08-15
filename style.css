@@ -28,7 +28,6 @@ body{
   font-family: 'Poppins', system-ui, -apple-system, Arial, sans-serif;
   color: var(--text);
   background: var(--bg);
-  /* Pola dasar halus biar tidak polos */
   background-image:
     radial-gradient(circle at 15% 25%, rgba(0,0,0,.05) 2px, transparent 2px),
     radial-gradient(circle at 85% 75%, rgba(0,0,0,.05) 2px, transparent 2px),
@@ -37,7 +36,7 @@ body{
   background-size: 26px 26px, 26px 26px, 52px 52px, 52px 52px;
 }
 
-/* ====== Latar dekoratif lebih kontras (garis miring & lingkaran) ====== */
+/* ====== Latar dekoratif ====== */
 .bg-decor{
   position: fixed;
   inset: 0;
@@ -52,7 +51,7 @@ body{
   opacity: .12;
 }
 
-/* Garis miring besar hitam–abu ala kartu */
+/* Garis miring besar hitam–abu */
 .bg-decor::before{
   left: -10%;
   top: -10%;
@@ -251,12 +250,48 @@ body{
   font-size: 13px;
 }
 
-/* ====== Responsif ====== */
+/* ====== Responsif Desktop & Tablet ====== */
 @media (min-width: 720px){
   .card-result{
     grid-template-columns: 380px 1fr;
     align-items: center;
     justify-items: start;
     text-align: left;
+  }
+}
+
+/* ====== Responsif HP ====== */
+@media (max-width: 719px){
+  .container {
+    margin: 16px;
+    padding: 20px;
+  }
+
+  #nrpInput {
+    width: 200px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .card-result {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .preview {
+    width: 240px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
   }
 }
