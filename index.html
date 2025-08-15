@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Absen MABA</title>
+  <!-- Google Font untuk tampilan profesional -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Elemen dekoratif latar (SVG via CSS ada di style.css) -->
+  <div class="bg-decor"></div>
+
+  <header class="site-header">
+    <div class="brand">
+      <!-- (Opsional) ganti teks ini dengan logo kampus jika ada -->
+      <span class="brand-mark">PKKMB</span>
+    </div>
+    <div class="badge">2025</div>
+  </header>
+
+  <main class="container">
+    <h1 class="title">QR Absen Mahasiswa Baru</h1>
+    <p class="subtitle">Masukkan <strong>NRP</strong> untuk mencari & mengunduh kartu absensi</p>
+
+    <!-- Kotak pencarian -->
+    <div class="search-box">
+      <input
+        id="nrpInput"
+        type="text"
+        inputmode="numeric"
+        placeholder="Contoh: 230660221018"
+        aria-label="NRP"
+      />
+      <button id="btnCari" class="btn-primary" onclick="cariFoto()">Cari</button>
+    </div>
+    <!-- <div class="hint">Tekan <kbd>Enter</kbd> untuk mencari lebih cepat</div> -->
+
+    <!-- Status / pesan -->
+    <div id="status" class="status" aria-live="polite"></div>
+
+    <!-- Hasil -->
+    <section id="hasil" class="hasil" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2025 Panitia PKKMB</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
